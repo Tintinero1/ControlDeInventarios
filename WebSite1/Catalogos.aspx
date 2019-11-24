@@ -3,6 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="BodyContent" runat="server">
 
         <h1>Catalogos</h1>
+    <br />
         <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="360px"></asp:DropDownList>
         <div style="text-align:center;">
             <asp:Button ID="btnAlta" runat="server" Text="Alta" Height="81px" Width="95px" style="margin-right:20px;" />

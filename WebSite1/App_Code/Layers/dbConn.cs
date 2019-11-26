@@ -11,7 +11,7 @@ using System.Net;
 /// </summary>
 public class dbConn
 {
-    
+    public DataTable dtC = new DataTable();
     SqlConnection conexion;
     public dbConn()
     {
@@ -24,8 +24,9 @@ public class dbConn
         
     }
 
-    public void ExecSP(string querySP, List<string> parametros)
+    public DataTable ExecSP(string querySP, List<string> parametros)
     {
+        DataTable dt = new DataTable();
         // SPResult es la variable que se encarga de guardar el mensaje resultante de un SP (StoredProcedure).
         string SPResult = "";
         // i es la variable cuyo unico objetivo es ser un contador para la lista parametros que recibimos.
@@ -80,14 +81,14 @@ public class dbConn
             }
             else
             {
-                cmd.Parameters.AddWithValue(p.ToString(), parametros[i].ToString());
+                cmd.Parameters.AddWithValue(p.ToString(), parametros[i]);
                 System.Diagnostics.Debug.WriteLine("Se agrega: " + p + ", " + parametros[i]);
             }
             i++;
         }
         
         // Ejecutamos el SP y cerramos la conexion.
-        cmd.ExecuteNonQuery();
+        dt.Load(cmd.ExecuteReader());
         conexion.Close();
 
         // Cualquier mensaje establecido en el parametro @mensaje de tipo OUTPUT se guardara en la variable
@@ -98,7 +99,23 @@ public class dbConn
         // Se limpian variables para uso posterior de la funcion.
         NombreParametros.Clear();
         i = 0;
+        return dt;
     }
+
+    public DataTable ReturnTable(string querySP)
+    {
+        DataTable dt = new DataTable();
+
+        SqlCommand cmd = new SqlCommand(querySP, conexion);
+
+        conexion.Open();
+        dt.Load(cmd.ExecuteReader());
+        conexion.Close();
+
+
+        return dt;
+    }
+
 }
 
 /// Nombre del programador: Albrand Aguirre Marc, Abel Efrain Pech Aguilar

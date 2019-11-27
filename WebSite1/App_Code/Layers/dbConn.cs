@@ -29,8 +29,11 @@ public class dbConn
         DataTable dt = new DataTable();
         // SPResult es la variable que se encarga de guardar el mensaje resultante de un SP (StoredProcedure).
         string SPResult = "";
+        bool SPResultDetected = false;
+        bool intDetected = false;
         // i es la variable cuyo unico objetivo es ser un contador para la lista parametros que recibimos.
         int i = 0;
+        int a = 0;
         // Esta lista contiene los nombres de los parametros de cualquier SP que mandemos llamar.
         List<string> NombreParametros = new List<string>();
 
@@ -54,7 +57,7 @@ public class dbConn
             // ni nos interesa guardarlo.
             if (i !=0)
             {
-                System.Diagnostics.Debug.WriteLine("Parametro: " + p.ParameterName);
+                System.Diagnostics.Debug.WriteLine("Leyendo parametro: " + p.ParameterName);
                 NombreParametros.Add(p.ParameterName.ToString());
             }
             i++;
@@ -77,13 +80,26 @@ public class dbConn
             {
                 cmd.Parameters.Add(p, SqlDbType.VarChar, 150);
                 cmd.Parameters[p].Direction = ParameterDirection.Output;
+                SPResultDetected = true;
                 System.Diagnostics.Debug.WriteLine("Se agrega: " + p + ", " + "' '");
             }
             else
             {
-                cmd.Parameters.AddWithValue(p.ToString(), parametros[i]);
-                System.Diagnostics.Debug.WriteLine("Se agrega: " + p + ", " + parametros[i]);
+                
+                // Detecta si el parametro que optuvimos puede ser considerado como int o una string.
+                intDetected = int.TryParse(parametros[i], out a);
+                if (intDetected)
+                {
+                    cmd.Parameters.AddWithValue(p.ToString(), a);
+                    System.Diagnostics.Debug.WriteLine("Se agrega INT: " + p + ", " + parametros[i]);
+                }
+                else
+                {
+                    cmd.Parameters.AddWithValue(p.ToString(), parametros[i]);
+                    System.Diagnostics.Debug.WriteLine("Se agrega: " + p + ", " + parametros[i]);
+                } 
             }
+            
             i++;
         }
         
@@ -93,8 +109,12 @@ public class dbConn
 
         // Cualquier mensaje establecido en el parametro @mensaje de tipo OUTPUT se guardara en la variable
         // SPResult y se desplegara por default en la consola.
-        SPResult = cmd.Parameters["@mensaje"].Value.ToString();
-        System.Diagnostics.Debug.WriteLine("BD respondio: " + SPResult);
+        if (SPResultDetected)
+        {
+            SPResult = cmd.Parameters["@mensaje"].Value.ToString();
+            System.Diagnostics.Debug.WriteLine("BD respondio: " + SPResult);
+        }
+        
 
         // Se limpian variables para uso posterior de la funcion.
         NombreParametros.Clear();

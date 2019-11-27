@@ -56,16 +56,32 @@ public class BL
 
     }
 
-    public void ConsultaCliente(string codigo, string nombre, string direccion, string telefono, string user)
+    public DataTable ConsultaCliente(string codigo, string nombre, string estatus)
     {
+        DataTable dt = new DataTable();
+
         Console.WriteLine("Enviando a DAL-ConsultaCliente");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        codigo = codigo.Trim();
+        nombre = nombre.Trim();
+        estatus = estatus.Trim();
+
+        dt = dl.ConsultaCliente(codigo, nombre, estatus);
+
+        return dt;
+    }
+
+    public void ModificaCliente(string codigo, string nombre, string direccion, string telefono, string estatus, string user)
+    {
+        Console.WriteLine("Enviando a DAL-ModificaCliente");
         // Quita espacios no deseados a la izquierda y a la derecha de la variable
         codigo = codigo.Trim();
         nombre = nombre.Trim();
         direccion = direccion.Trim();
         telefono = telefono.Trim();
+        estatus = estatus.Trim();
 
-        dl.ConsultaCliente(codigo, nombre, direccion, telefono, user);
+        dl.ModificaCliente(codigo, nombre, direccion, telefono, estatus, user);
 
     }
 }

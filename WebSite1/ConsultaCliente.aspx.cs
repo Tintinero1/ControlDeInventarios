@@ -19,12 +19,23 @@ public partial class ConsultaCliente : System.Web.UI.Page
 
     protected void btnConsultaCliente_Click(object sender, EventArgs e)
     {
+        string id_cliente = txtIdCliente.Text;
+        string nombre = txtNombre.Text;
+        string estatus = DDLClientes.SelectedValue;
+        if (DDLClientes.SelectedValue == "Inactivo")
+        {
+            estatus = "0";
+        }
+        else
+            estatus = "1";
 
+        gvClientes.DataSource = bl.ConsultaCliente(id_cliente, nombre, estatus);
+        gvClientes.DataBind();
     }
 
     public void RefreshTableData()
     {
-        //gvClientes.DataSource = bl.ConsultaCliente("cliente");
+        gvClientes.DataSource = bl.ConsultaCliente("0"," ", "1");
         gvClientes.DataBind();
         /*ListViewClientes.DataSource = bl.getTable("cliente");
         ListViewClientes.DataBind();

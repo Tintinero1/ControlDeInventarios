@@ -85,23 +85,47 @@ public class DAL
         
     }
 
-    public void ConsultaCliente(string id_cliente, string nombre, string direccion, string telefono, string user)
+    public DataTable ConsultaCliente(string id_cliente, string nombre, string estatus)
     {
+        DataTable dt = new DataTable();
+
         string querySP = "ConsultaCliente";
         parametros.Add(id_cliente);
         parametros.Add(nombre);
-        parametros.Add(direccion);
-        parametros.Add(telefono);
-        parametros.Add(user);
+        parametros.Add(estatus);
 
         try
         {
-            db.ExecSP(querySP, parametros);
+            dt = db.ExecSP(querySP, parametros);
             parametros.Clear();
         }
         catch (Exception ex)
         {
             System.Diagnostics.Debug.WriteLine(ex);
+        }
+        return dt;
+    }
+
+    public void ModificaCliente(string id_cliente, string nombre, string direccion, string telefono, string estatus, string user)
+    {
+        DataTable dt = new DataTable();
+
+        string querySP = "ModificaCliente";
+        parametros.Add(id_cliente);
+        parametros.Add(nombre);
+        parametros.Add(direccion);
+        parametros.Add(telefono);
+        parametros.Add(estatus);
+        parametros.Add(user);
+
+        //try
+        //{
+            dt = db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        //}
+        //catch (Exception ex)
+        {
+           // System.Diagnostics.Debug.WriteLine(ex);
         }
 
     }

@@ -84,4 +84,62 @@ public class BL
         dl.ModificaCliente(codigo, nombre, direccion, telefono, estatus, user);
 
     }
+
+    public void AltaEmpleado(string matricula, string nombre, string puesto, string direccion, string telefono, string estatus, string user)
+    {
+        Console.WriteLine("Enviando a DAL-AltaEmpleado");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        matricula.Trim();
+        nombre = nombre.Trim();
+        puesto = puesto.Trim();
+        direccion = direccion.Trim();
+        telefono = telefono.Trim();
+        estatus = estatus.Trim();
+
+        dl.AltaEmpleado(matricula, nombre, puesto, direccion, telefono, estatus, user);
+
+    }
+
+    public void BajaEmpleado(string matricula, string user)
+    {
+        Console.WriteLine("Enviando a DAL-BajaEmpleado");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        matricula = matricula.Trim();
+
+        dl.BajaEmpleado(matricula, user);
+
+    }
+
+    public DataTable ConsultaEmpleado(string matricula, string nombre, string puesto, string direccion, string telefono, string estatus)
+    {
+        DataTable dt = new DataTable();
+
+        Console.WriteLine("Enviando a DAL-ConsultaEmpleado");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        matricula.Trim();
+        nombre = nombre.Trim();
+        puesto = puesto.Trim();
+        direccion = direccion.Trim();
+        telefono = telefono.Trim();
+        estatus = estatus.Trim();
+
+        dt = dl.ConsultaEmpleado(matricula, nombre, puesto, direccion, telefono, estatus);
+
+        return dt;
+    }
+
+    public void ModificaEmpleado(string matricula, string nombre, string puesto, string direccion, string telefono, string estatus, string user)
+    {
+        Console.WriteLine("Enviando a DAL-ModificaEmpleado");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        matricula.Trim();
+        nombre = nombre.Trim();
+        puesto = puesto.Trim();
+        direccion = direccion.Trim();
+        telefono = telefono.Trim();
+        estatus = estatus.Trim();
+
+        dl.ModificaEmpleado(matricula, nombre, puesto, direccion, telefono, estatus, user);
+
+    }
 }

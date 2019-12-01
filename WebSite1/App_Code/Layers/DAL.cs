@@ -51,6 +51,7 @@ public class DAL
 
         return dt;
     }
+    #region Empieza Alta Cliente
     public void AltaCliente(string nombre, string direccion, string telefono, string user)
     {
         //List<CustomObject> Custo = new List<CustomObject>();
@@ -118,14 +119,107 @@ public class DAL
         parametros.Add(estatus);
         parametros.Add(user);
 
-        //try
-        //{
+        try
+        {
             dt = db.ExecSP(querySP, parametros);
             parametros.Clear();
-        //}
-        //catch (Exception ex)
+        }
+        catch (Exception ex)
         {
-           // System.Diagnostics.Debug.WriteLine(ex);
+           System.Diagnostics.Debug.WriteLine(ex);
+        }
+
+    }
+    #endregion //Termina Alta Cliente
+
+    public void AltaEmpleado(string matricula, string nombre, string puesto, string direccion, string telefono, string estatus, string user)
+    {
+        //List<CustomObject> Custo = new List<CustomObject>();
+        string querySP = "AltaEmpleado";
+        parametros.Add(matricula);
+        parametros.Add(nombre);
+        parametros.Add(puesto);
+        parametros.Add(direccion);
+        parametros.Add(telefono);
+        parametros.Add(estatus);
+        parametros.Add(user);
+        //parametros.Add(" ");
+
+        try
+        {
+            db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+
+    }
+
+    public void BajaEmpleado(string matricula, string user)
+    {
+        string querySP = "BajaEmpleado";
+        parametros.Add(matricula);
+        parametros.Add(user);
+
+        try
+        {
+            db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+
+    }
+
+    public DataTable ConsultaEmpleado(string matricula, string nombre, string puesto, string direccion, string telefono, string estatus)
+    {
+        DataTable dt = new DataTable();
+
+        string querySP = "ConsultaEmpleado";
+        parametros.Add(matricula);
+        parametros.Add(nombre);
+        parametros.Add(puesto);
+        parametros.Add(direccion);
+        parametros.Add(telefono);
+        parametros.Add(estatus);
+
+        try
+        {
+            dt = db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+        return dt;
+    }
+
+    public void ModificaEmpleado(string matricula, string nombre, string puesto, string direccion, string telefono, string estatus, string user)
+    {
+        DataTable dt = new DataTable();
+
+        string querySP = "ModificaEmpleado";
+        parametros.Add(matricula);
+        parametros.Add(nombre);
+        parametros.Add(puesto);
+        parametros.Add(direccion);
+        parametros.Add(telefono);
+        parametros.Add(estatus);
+        parametros.Add(user);
+
+        try
+        {
+            dt = db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
         }
 
     }

@@ -34,6 +34,14 @@ public class BL
 
         return dt;
     }
+    public int LoginValidation(string user, string pass)
+    {
+        Console.WriteLine("Enviando a DAL-LoginValidation");
+        int result = 0;
+
+        result = dl.LoginValidation(user, pass);
+        return result;
+    }
     public void AltaCliente(string nombre, string direccion, string telefono, string user)
     {
         Console.WriteLine("Enviando a DAL-AltaCliente");

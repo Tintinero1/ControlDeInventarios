@@ -51,6 +51,26 @@ public class DAL
 
         return dt;
     }
+
+    public int LoginValidation(string user, string pass)
+    {
+        int result = 0;
+        string querySP = "LoginValidation";
+        parametros.Add(user);
+        parametros.Add(pass);
+
+        try
+        {
+            result = db.ExecSPReturnInt(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+        return result;
+    }
+
     #region Empieza Alta Cliente
     public void AltaCliente(string nombre, string direccion, string telefono, string user)
     {
@@ -62,10 +82,15 @@ public class DAL
         parametros.Add(user);
         //parametros.Add(" ");
 
-        
-        db.ExecSP(querySP, parametros);
-        parametros.Clear();
-
+        try
+        {
+            db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
     }
 
     public void BajaCliente(string id_cliente, string user)

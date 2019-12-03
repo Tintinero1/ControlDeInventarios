@@ -71,7 +71,7 @@ public class DAL
         return result;
     }
 
-    #region Empieza Alta Cliente
+    #region Cliente /**/ Comienza codigo de cliente /**/
     public void AltaCliente(string nombre, string direccion, string telefono, string user)
     {
         //List<CustomObject> Custo = new List<CustomObject>();
@@ -155,8 +155,9 @@ public class DAL
         }
 
     }
-    #endregion //Termina Alta Cliente
+    #endregion //Termina Cliente //jj
 
+    #region Empleado /**/ Comienza codigo de empleado /**/
     public void AltaEmpleado(string matricula, string nombre, string puesto, string direccion, string telefono, string estatus, string user)
     {
         //List<CustomObject> Custo = new List<CustomObject>();
@@ -248,6 +249,169 @@ public class DAL
         }
 
     }
+    #endregion //Termina codigo de empleado
+
+    #region Almacen /**/ Comienza codigo de Almacen /**/
+    public void AltaAlmacen(string nombre, string estatus, string user)
+    {
+        string querySP = "AltaAlmacen";
+        parametros.Add(nombre);
+        parametros.Add(estatus);
+        parametros.Add(user);
+
+        try
+        {
+            db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+
+    }
+
+    public void BajaAlmacen(string nombre, string user)
+    {
+        string querySP = "BajaAlmacen";
+        parametros.Add(nombre);
+        parametros.Add(user);
+
+        try
+        {
+            db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+
+    }
+
+    public DataTable ConsultaAlmacen(string nombre, string estatus)
+    {
+        DataTable dt = new DataTable();
+
+        string querySP = "ConsultaAlmacen";
+        parametros.Add(nombre);
+        parametros.Add(estatus);
+
+        try
+        {
+            dt = db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+        return dt;
+    }
+
+    public void ModificaAlmacen(string codigo, string nombre, string estatus, string user)
+    {
+        DataTable dt = new DataTable();
+
+        string querySP = "ModificaAlmacen";
+        parametros.Add(codigo);
+        parametros.Add(nombre);
+        parametros.Add(estatus);
+        parametros.Add(user);
+
+        try
+        {
+            dt = db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+
+    }
+    #endregion //Termina codigo de almacen
+
+    #region Locacion /**/ Comienza codigo de Locacion /**/
+    public void AltaLocacion(string nombre, string estatus, string user)
+    {
+        string querySP = "AltaLocacion";
+        parametros.Add(nombre);
+        parametros.Add(estatus);
+        parametros.Add(user);
+
+        try
+        {
+            db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+
+    }
+
+    public void BajaLocacion(string nombre, string user)
+    {
+        string querySP = "BajaLocacion";
+        parametros.Add(nombre);
+        parametros.Add(user);
+
+        try
+        {
+            db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+
+    }
+
+    public DataTable ConsultaLocacion(string nombre, string estatus)
+    {
+        DataTable dt = new DataTable();
+
+        string querySP = "ConsultaLocacion";
+        parametros.Add(nombre);
+        parametros.Add(estatus);
+
+        try
+        {
+            dt = db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+        return dt;
+    }
+
+    public void ModificaLocacion(string codigo, string nombre, string estatus, string user)
+    {
+        DataTable dt = new DataTable();
+
+        string querySP = "ModificaLocacion";
+        parametros.Add(codigo);
+        parametros.Add(nombre);
+        parametros.Add(estatus);
+        parametros.Add(user);
+
+        try
+        {
+            dt = db.ExecSP(querySP, parametros);
+            parametros.Clear();
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+
+    }
+    #endregion //Termina codigo de locacion
 }
 
 /// Nombre del programador: Albrand Aguirre Marc, Abel Efrain Pech Aguilar

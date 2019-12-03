@@ -150,4 +150,102 @@ public class BL
         dl.ModificaEmpleado(matricula, nombre, puesto, direccion, telefono, estatus, user);
 
     }
+
+    #region Almacenes /**/ Inicia codigo de almacenes /**/
+    public void AltaAlmacen(string nombre, string estatus, string user)
+    {
+        Console.WriteLine("Enviando a DAL-AltaAlmacen");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        nombre = nombre.Trim();
+        estatus = estatus.Trim();
+
+        dl.AltaAlmacen(nombre, estatus, user);
+
+    }
+
+    public void BajaAlmacen(string nombre, string user)
+    {
+        Console.WriteLine("Enviando a DAL-BajaAlmacen");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        nombre = nombre.Trim();
+
+        dl.BajaAlmacen(nombre, user);
+
+    }
+
+    public DataTable ConsultaAlmacen(string nombre, string estatus)
+    {
+        DataTable dt = new DataTable();
+
+        Console.WriteLine("Enviando a DAL-ConsultaAlmacen");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        nombre = nombre.Trim();
+        estatus = estatus.Trim();
+
+        dt = dl.ConsultaAlmacen(nombre, estatus);
+
+        return dt;
+    }
+
+    public void ModificaAlmacen(string codigo, string nombre, string estatus, string user)
+    {
+        Console.WriteLine("Enviando a DAL-ModificaAlmacen");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        codigo = codigo.Trim();
+        nombre = nombre.Trim();
+        estatus = estatus.Trim();
+
+        dl.ModificaAlmacen(codigo, nombre, estatus, user);
+
+    }
+    #endregion
+
+    #region Locaciones /**/ Inicia codigo de locaciones /**/
+    public void AltaLocacion(string nombre, string estatus, string user)
+    {
+        Console.WriteLine("Enviando a DAL-AltaLocacion");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        nombre = nombre.Trim();
+        estatus = estatus.Trim();
+
+        dl.AltaLocacion(nombre, estatus, user);
+
+    }
+
+    public void BajaLocacion(string nombre, string user)
+    {
+        Console.WriteLine("Enviando a DAL-BajaLocacion");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        nombre = nombre.Trim();
+
+        dl.BajaLocacion(nombre, user);
+
+    }
+
+    public DataTable ConsultaLocacion(string nombre, string estatus)
+    {
+        DataTable dt = new DataTable();
+
+        Console.WriteLine("Enviando a DAL-ConsultaLocacion");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        nombre = nombre.Trim();
+        estatus = estatus.Trim();
+
+        dt = dl.ConsultaLocacion(nombre, estatus);
+
+        return dt;
+    }
+
+    public void ModificaLocacion(string codigo, string nombre, string estatus, string user)
+    {
+        Console.WriteLine("Enviando a DAL-ModificaLocacion");
+        // Quita espacios no deseados a la izquierda y a la derecha de la variable
+        codigo = codigo.Trim();
+        nombre = nombre.Trim();
+        estatus = estatus.Trim();
+
+        dl.ModificaLocacion(codigo, nombre, estatus, user);
+
+    }
+    #endregion //Termina codigo de locaciones
 }

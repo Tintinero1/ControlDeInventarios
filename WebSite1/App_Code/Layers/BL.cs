@@ -216,6 +216,8 @@ public class BL
     }
     #endregion
 
+    /* Locaciones */
+
     #region Locaciones /**/ Inicia codigo de locaciones /**/
     public void AltaLocacion(string nombre, string estatus, string user)
     {

@@ -60,10 +60,10 @@
 
         <h1 class="my-4">Inventory Management System</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">Clientes</a>
-          <a href="#" class="list-group-item">Empleados</a>
+          <a href="ConsultaCliente.aspx" class="list-group-item">Clientes</a>
+          <a href="ConsultaEmpleado.aspx" class="list-group-item">Empleados</a>
           <a href="#" class="list-group-item">Pedidos</a>
-            <a href="#" class="list-group-item">Almacenes</a>
+            <a href="ConsultaAlmacenes.aspx" class="list-group-item">Almacenes</a>
             <a href="#" class="list-group-item">Locaciones</a>
             <a href="#" class="list-group-item">Productos</a>
             <a href="#" class="list-group-item">Puestos</a>
@@ -109,7 +109,7 @@
               <a href="#"><img class="card-img-top" src="http://www.gesol.com.pk/images/clients.jpg" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Clientes</a>
+                  <a href="ConsultaCliente.aspx">Clientes</a>
                 </h4>
                 
                 <p class="card-text">Consulta, Modificacion, Alta y Baja de nuestros clientes principales!</p>
@@ -125,7 +125,7 @@
               <a href="#"><img class="card-img-top" src="https://www.icr-evolution.com/wp-content/uploads/2017/10/people.jpg" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Empleados</a>
+                  <a href="ConsultaEmpleado.aspx">Empleados</a>
                 </h4>
                 
                 <p class="card-text">Consulta, Modificacion, Alta y Baja de nuestros colaboradores!</p>
@@ -160,7 +160,7 @@
               <a href="#"><img class="card-img-top" src="https://timsacr.com/esp/wp-content/uploads/2015/09/Sistema-Racks-Drive-In-1.jpg" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Almacenes</a>
+                  <a href="ConsultaAlmacenes.aspx">Almacenes</a>
                 </h4>
                 
                 <p class="card-text">Consulta, Modificacion, Alta y Baja de Almacenes!</p>

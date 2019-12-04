@@ -27,7 +27,7 @@
 			<div class="card-header">
 				<h3>Ingresar </h3>
 				<div class="d-flex justify-content-end social_icon">
-					<span><a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></span>
+					<a href="https://www.facebook.com/"><span><i class="fab fa-facebook-square"></i></span></a>
 				</div>
 			</div>
 			<div class="card-body">
@@ -36,7 +36,7 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="usuario">
+						<input id=username type="text" class="form-control" placeholder="usuario">
 						
 					</div>
 					<div class="input-group form-group">
@@ -47,7 +47,9 @@
 					</div>
 					
 					<div class="form-group">
-						<input type="submit" value="Ingresar" class="btn float-right login_btn">
+                        <button type= reset id="1" onclick="myFunction()" class="btn float-right login_btn">Ingresar</button>
+						<%--<a href="MenuPrincipal.aspx"><input type="submit" value="Ingresar" class="btn float-right login_btn"></a>--%>
+                        
 					</div>
 				</form>
 			</div>
@@ -60,5 +62,16 @@
 		</div>
 	</div>
 </div>
+
+<script>
+    function myFunction(username) {
+     
+    alert('Bienvenido a Inventory Management System');
+    location.href = 'http://localhost:49226/MenuPrincipal.aspx';
+}
+</script>
+
+
+
 </body>
 </html>

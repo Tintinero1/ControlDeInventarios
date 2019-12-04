@@ -25,7 +25,7 @@
         <asp:GridView ID="gvEmpleados" runat="server" AutoGenerateColumns="true"></asp:GridView>
     </div>
     <div>
-        <asp:Button ID="btnModificaEmpleado" runat="server" Text="Consulta" Width="305px" OnClick="btnModificaEmpleado_Click" />
+        <asp:Button ID="btnModificaEmpleado" runat="server" Text="Modificar" Width="305px" OnClick="btnModificaEmpleado_Click" />
     </div>
     
 </asp:Content>

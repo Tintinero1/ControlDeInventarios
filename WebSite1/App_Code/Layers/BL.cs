@@ -23,6 +23,11 @@ public class BL
                     TableName = "select * from cliente";
                     break;
                 }
+            case "empleado":
+                {
+                    TableName = "select * from empleado";
+                    break;
+                }
             default:
                 {
                     TableName = "TABLE-NOT-FOUND";

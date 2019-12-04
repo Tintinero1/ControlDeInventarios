@@ -110,7 +110,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-               <center> <p>&copy; <%: DateTime.Now.Year %> - A&P Web Application</p> </center>
+               <center> <p>Copyright &copy; <%: DateTime.Now.Year %> - A&P Web Application</p> </center>
             </footer>
         </div>
     </form>

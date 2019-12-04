@@ -19,7 +19,7 @@ namespace UX1.Layers
         public void setPermiso(int dt)
         {
             permiso = dt;
-            
+
         }
 
         // Sets user name

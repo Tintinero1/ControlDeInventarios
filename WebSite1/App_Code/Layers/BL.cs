@@ -47,6 +47,8 @@ public class BL
         result = dl.LoginValidation(user, pass);
         return result;
     }
+
+    /* Clientes */
     public void AltaCliente(string nombre, string direccion, string telefono, string user)
     {
         Console.WriteLine("Enviando a DAL-AltaCliente");
@@ -97,6 +99,8 @@ public class BL
         dl.ModificaCliente(codigo, nombre, direccion, telefono, estatus, user);
 
     }
+
+    /* Empleados */
 
     public void AltaEmpleado(string matricula, string nombre, string puesto, string direccion, string telefono, string estatus, string user)
     {
@@ -155,6 +159,8 @@ public class BL
         dl.ModificaEmpleado(matricula, nombre, puesto, direccion, telefono, estatus, user);
 
     }
+
+    /* Almacenes */
 
     #region Almacenes /**/ Inicia codigo de almacenes /**/
     public void AltaAlmacen(string nombre, string estatus, string user)

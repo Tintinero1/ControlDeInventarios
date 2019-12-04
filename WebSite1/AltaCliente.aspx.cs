@@ -21,7 +21,6 @@ public partial class AltaCliente : System.Web.UI.Page
         string Telefono = txtTelefono.Text;
 
         bl.AltaCliente(Nombre, Direccion, Telefono, "root");
-
-        
+ 
     }
 }

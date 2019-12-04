@@ -8,6 +8,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="/fonts/1.png">
+
 	<title>Login Page</title>
    <!--Made with love by Mutiullah Samim -->
    

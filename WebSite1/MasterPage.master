@@ -4,6 +4,8 @@
 
 <html>
 <head runat="server">
+        <link rel="icon" href="/fonts/1.png">
+
     <!-- Meta tags and CSS reference needed for bootstrap -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

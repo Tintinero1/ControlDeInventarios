@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <title>Catalogos</title>
+    <title>Inventarios</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -18,28 +18,89 @@
     <form id="form1" runat="server">
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="#">MyTecBits.com</a>
+            <a class="navbar-brand" href="/Default.aspx">Inventory Management System</a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbar" class="navbar-collapse collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="/Default.aspx">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown04">Catalogos<span class="caret"></span></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <ul class="dropdown-item">
-                                <li class="dropdown-item">Hola</li>
-                                <li class="dropdown-item">adios</li>
-                            </ul>
-                            
-                          <!--<a class="dropdown-item" href="#">Something else here</a> -->
-                        </div>
-                        
-                    </li>
-                </ul>
+             
+                    
+
+                    <div class="dropdown show">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Clientes
+                      </a>
+
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/Default.aspx">Consulta</a>
+                        <a class="dropdown-item" href="/Default.aspx">Modifica</a>
+                        <a class="dropdown-item" href="/Default.aspx">Alta</a>
+                        <a class="dropdown-item" href="/Default.aspx">Baja</a>
+
+                      </div>
+                    </div>
+
+                <div class="dropdown show">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Catalogos
+                      </a>
+
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/Default.aspx">Consulta</a>
+                        <a class="dropdown-item" href="/Default.aspx">Modifica</a>
+                        <a class="dropdown-item" href="/Default.aspx">Alta</a>
+                        <a class="dropdown-item" href="/Default.aspx">Baja</a>
+
+                      </div>
+                    </div>
+
+
+
+                <div class="dropdown show">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Empleados
+                      </a>
+
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/Default.aspx">Consulta</a>
+                        <a class="dropdown-item" href="/Default.aspx">Modifica</a>
+                        <a class="dropdown-item" href="/Default.aspx">Alta</a>
+                        <a class="dropdown-item" href="/Default.aspx">Baja</a>
+
+                      </div>
+                    </div>
+
+
+                <div class="dropdown show">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Almacenes
+                      </a>
+
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/Default.aspx">Consulta</a>
+                        <a class="dropdown-item" href="/Default.aspx">Modifica</a>
+                        <a class="dropdown-item" href="/Default.aspx">Alta</a>
+                        <a class="dropdown-item" href="/Default.aspx">Baja</a>
+
+                      </div>
+                    </div>
+
+                <div class="dropdown show">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Productos
+                      </a>
+
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/Default.aspx">Consulta</a>
+                        <a class="dropdown-item" href="/Default.aspx">Modifica</a>
+                        <a class="dropdown-item" href="/Default.aspx">Alta</a>
+                        <a class="dropdown-item" href="/Default.aspx">Baja</a>
+
+                      </div>
+                    </div>
+
+                    
+               
             </div>
             <!--/.nav-collapse -->
         </nav>
@@ -49,7 +110,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Marc Sample Application</p>
+               <center> <p>&copy; <%: DateTime.Now.Year %> - A&P Web Application</p> </center>
             </footer>
         </div>
     </form>

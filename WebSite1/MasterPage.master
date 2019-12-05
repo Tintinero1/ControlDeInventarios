@@ -20,7 +20,7 @@
     <form id="form1" runat="server">
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="/Default.aspx">Inventory Management System</a>
+            <a class="navbar-brand" href="/MenuPrincipal.aspx">Inventory Management System</a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,10 +34,10 @@
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="/Default.aspx">Consulta</a>
-                        <a class="dropdown-item" href="/Default.aspx">Modifica</a>
-                        <a class="dropdown-item" href="/Default.aspx">Alta</a>
-                        <a class="dropdown-item" href="/Default.aspx">Baja</a>
+                        <a class="dropdown-item" href="/ConsultaCliente.aspx">Consulta</a>
+                        <a class="dropdown-item" href="/ModificaCliente.aspx">Modifica</a>
+                        <a class="dropdown-item" href="/AltaCliente.aspx">Alta</a>
+                        <a class="dropdown-item" href="/BajaCliente.aspx">Baja</a>
 
                       </div>
                     </div>

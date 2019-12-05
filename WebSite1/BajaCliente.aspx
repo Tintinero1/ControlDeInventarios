@@ -6,7 +6,7 @@
         <asp:Button ID="btnModificacion" runat="server" Text="Modificacion" />
     </div>
     <div>
-        <asp:Label ID="lbNombre" runat="server" Text="Nombre del Cliente: "></asp:Label>
+        <asp:Label ID="lbNombre" runat="server" Text="ID del Cliente: "></asp:Label>
         <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
         <asp:GridView ID="gvClientes" runat="server" AutoGenerateColumns="true"></asp:GridView>
         <asp:Table ID="Table1" runat="server"></asp:Table>

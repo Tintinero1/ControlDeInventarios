@@ -12,7 +12,7 @@
         <asp:TextBox ID="txtTelefono" runat="server"></asp:TextBox>
     </div>
     <div>
-        <asp:Button ID="btnAltaCliente" runat="server" Text="Button" Width="305px" OnClick="btnAltaCliente_Click" />
+        <asp:Button ID="btnAltaCliente" runat="server" Text="Alta" Width="305px" OnClick="btnAltaCliente_Click" />
     </div>
     
 </asp:Content>

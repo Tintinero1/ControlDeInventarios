@@ -33,6 +33,11 @@ public class BL
                     TableName = "select * from almacen";
                     break;
                 }
+            case "locacion":
+                {
+                    TableName = "select * from locacion";
+                    break;
+                }
             default:
                 {
                     TableName = "TABLE-NOT-FOUND";

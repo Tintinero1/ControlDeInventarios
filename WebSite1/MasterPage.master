@@ -44,14 +44,14 @@
 
                 <div class="dropdown show">
                       <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Catalogos
+                        Locacion
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="/Default.aspx">Consulta</a>
-                        <a class="dropdown-item" href="/Default.aspx">Modifica</a>
-                        <a class="dropdown-item" href="/Default.aspx">Alta</a>
-                        <a class="dropdown-item" href="/Default.aspx">Baja</a>
+                        <a class="dropdown-item" href="/ConsultaLocacion.aspx">Consulta</a>
+                        <a class="dropdown-item" href="/ModificaLocacion.aspx">Modifica</a>
+                        <a class="dropdown-item" href="/AltaLocacion.aspx">Alta</a>
+                        <a class="dropdown-item" href="/BajaLocacion.aspx">Baja</a>
 
                       </div>
                     </div>
@@ -64,10 +64,10 @@
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="/Default.aspx">Consulta</a>
-                        <a class="dropdown-item" href="/Default.aspx">Modifica</a>
-                        <a class="dropdown-item" href="/Default.aspx">Alta</a>
-                        <a class="dropdown-item" href="/Default.aspx">Baja</a>
+                        <a class="dropdown-item" href="/ConsultaEmpleado.aspx">Consulta</a>
+                        <a class="dropdown-item" href="/ModificaEmpleado.aspx">Modifica</a>
+                        <a class="dropdown-item" href="/AltaEmpleado.aspx">Alta</a>
+                        <a class="dropdown-item" href="/BajaEmpleado.aspx">Baja</a>
 
                       </div>
                     </div>
@@ -79,10 +79,10 @@
                       </a>
 
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="/Default.aspx">Consulta</a>
-                        <a class="dropdown-item" href="/Default.aspx">Modifica</a>
-                        <a class="dropdown-item" href="/Default.aspx">Alta</a>
-                        <a class="dropdown-item" href="/Default.aspx">Baja</a>
+                        <a class="dropdown-item" href="/ConsultaAlmacenes.aspx">Consulta</a>
+                        <a class="dropdown-item" href="/ModificaAlmacen.aspx">Modifica</a>
+                        <a class="dropdown-item" href="/AltaAlmacen.aspx">Alta</a>
+                        <a class="dropdown-item" href="/BajaAlmacen.aspx">Baja</a>
 
                       </div>
                     </div>

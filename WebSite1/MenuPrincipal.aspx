@@ -64,7 +64,7 @@
           <a href="ConsultaEmpleado.aspx" class="list-group-item">Empleados</a>
           <a href="#" class="list-group-item">Pedidos</a>
             <a href="ConsultaAlmacenes.aspx" class="list-group-item">Almacenes</a>
-            <a href="#" class="list-group-item">Locaciones</a>
+            <a href="#" class="list-group-item">Locaciones!</a>
             <a href="#" class="list-group-item">Productos</a>
             <a href="#" class="list-group-item">Puestos</a>
 
